@@ -1,0 +1,576 @@
+%in-b {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+%clearfix {
+  zoom: 1;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+}
+// 文本显示多少行就省略
+@mixin ells($row) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+.border-title {
+  font-size: 18px;
+  color: #444444;
+  font-weight: bold;
+  border-bottom: 1px solid #eeeeee;
+  span {
+    @extend %in-b;
+    padding: 15px 7px;
+    border-bottom: 2px solid #ffa826;
+    margin-bottom: -1px;
+  }
+}
+.hx-l-wenda {
+  padding: 20px;
+  border: solid 1px #eeeeee;
+  margin: 20px 0 40px;
+  .t-key,
+  .t-val {
+    @extend %in-b;
+    vertical-align: middle;
+  }
+
+  .jxhd {
+    .jx-top {
+      .wd-title {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        .t-key {
+          font-size: 14px;
+          padding: 0 5px;
+          background-color: #ffa826;
+          border-radius: 4px;
+          color: #fff;
+        }
+      }
+      .t-author {
+        padding-left: 12px;
+        line-height: 30px;
+        color: #999999;
+        background-color: #f5f5f5;
+        margin-bottom: 20px;
+        i {
+          @extend %in-b;
+          width: 15px;
+          height: 15px;
+          background: url(https://img.thea.cn/public/platform/thea/201905/hx/images/sprite.png) -46px -198px;
+          margin: 0 10px 0 50px;
+        }
+      }
+    }
+    .jx-bottom {
+      .wd-title {
+        margin-bottom: 16px;
+        .t-key {
+          width: 22px;
+          height: 34px;
+          background: url(../images/01.png) no-repeat;
+        }
+        .t-val {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+      p {
+        color: #666666;
+      }
+    }
+  }
+  .qtwd {
+    .i-top {
+      padding: 28px 0 20px;
+      .wd-title {
+        margin-bottom: 10px;
+      }
+      .t-key {
+        margin-right: 10px;
+        img {
+          border-radius: 50%;
+        }
+      }
+      .t-val {
+        color: #999999;
+      }
+    }
+    .i-bottom {
+      padding: 20px;
+      background-color: #f5f5f5;
+      margin-bottom: 10px;
+      @extend %clearfix;
+      position: relative;
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #f5f5f5;
+        border-left: 10px solid transparent;
+        position: absolute;
+        top: -20px;
+        left: 23px;
+      }
+      .b-l,
+      .b-r {
+        float: left;
+      }
+      .b-l {
+        margin-right: 10px;
+        img {
+          border-radius: 50%;
+        }
+      }
+      .b-r {
+        width: 93%;
+        .r-name {
+          line-height: 38px;
+        }
+        a {
+          @extend %in-b;
+          padding: 12px 0;
+        }
+        p {
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+.hx-l-course {
+  .c-cont {
+    .c-detail {
+      padding: 26px 0 20px;
+      border-bottom: 1px dotted #dddddd;
+      @extend %clearfix;
+    }
+    .d-l,
+    .d-r {
+      float: left;
+    }
+    .d-l {
+      width: 168px;
+      height: 72px;
+      margin-right: 20px;
+      a {
+        @extend %in-b;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .wap-star {
+        display: none;
+      }
+    }
+    .d-r {
+      width: 75%;
+      .r-title {
+        font-size: 16px;
+        margin-bottom: 6px;
+        .t-name,
+        i {
+          @extend %in-b;
+          vertical-align: middle;
+        }
+        .t-name {
+          margin-right: 20px;
+          line-height: 22px;
+        }
+        .t-star {
+          i {
+            width: 14px;
+            height: 13px;
+          }
+          .s-sel {
+            background: url(../images/star-sel.png) no-repeat;
+          }
+          .s-half {
+            background: url(../images/star-half.png) no-repeat;
+          }
+          .s-nor {
+            background: url(../images/star-nor.png) no-repeat;
+          }
+        }
+      }
+      p {
+        color: #999999;
+        @include ells(2);
+      }
+    }
+  }
+  .c-more {
+    padding-top: 18px;
+    @extend %clearfix;
+    margin-right: -30px;
+    a {
+      float: left;
+      margin-right: 30px;
+    }
+  }
+}
+.hx-r-form {
+  padding: 20px 20px 0 20px;
+  height: 409px;
+  background: url(../images/form-bg.png) no-repeat;
+  margin-bottom: 20px;
+  .f-top {
+    @extend %clearfix;
+    margin-right: -2%;
+    margin-bottom: 20px;
+    .t-l,
+    .t-r {
+      float: left;
+    }
+    .t-l {
+      width: 122px;
+      height: 52px;
+      margin-right: 8px;
+    }
+    .t-r {
+      .r-name {
+        font-weight: bold;
+      }
+      .r-advisor {
+        font-size: 12px;
+        color: #666666;
+        .text {
+          padding: 1px 4px;
+          line-height: 18px;
+          color: #fff;
+          background-image: linear-gradient(267deg, #ffa826 0%, #ffbf5f 100%);
+          position: relative;
+          &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 3px solid transparent;
+            border-right: 3px solid #ffbf5f;
+            border-bottom: 3px solid transparent;
+            border-left: 3px solid transparent;
+            position: absolute;
+            left: -6px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
+        }
+        p {
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+    }
+  }
+  .jg-head {
+    @extend %clearfix;
+    border-top: 1px solid #ffd9be;
+    li {
+      float: left;
+      width: 80px;
+      height: 34px;
+      padding: 15px 0 23px;
+      margin-right: 10px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        border: solid 1px #eeeeee;
+        box-sizing: border-box;
+      }
+      &.on {
+        &::before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: #ffa826;
+          position: absolute;
+          top: -2px;
+        }
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-right: 6px solid transparent;
+          border-bottom: 5px solid #ffa826;
+          border-left: 6px solid transparent;
+
+          position: absolute;
+          top: -12px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        img {
+          border: solid 1px #ffa826;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .sign-in {
+    padding: 20px 20px 0;
+  }
+  input {
+    width: 100%;
+    line-height: 36px;
+    border-radius: 4px;
+    border: solid 1px #eeeeee;
+    margin-bottom: 18px;
+  }
+  input[type="submit"] {
+    border: none;
+    background-color: #ffa826;
+    color: #fff;
+  }
+  .f-zx {
+    padding: 10px 0;
+    color: #ffffff;
+    .zx-text {
+      @extend %in-b;
+      line-height: 14px;
+      width: 28px;
+      height: 26px;
+      margin: 0 8px 0 30px;
+    }
+    .zx-tel {
+      font-size: 29px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  $browser-default-font-size: 75px !default;
+  @function pr($px) {
+    @return $px / $browser-default-font-size * 1rem;
+  }
+
+  .border-title {
+    font-size: pr(18px);
+    border-bottom: none;
+    position: relative;
+    &::before {
+      content: "";
+      width: pr(11px);
+      height: pr(34px);
+      background-image: linear-gradient(-61deg, #ffa826 0%, #ff7843 100%);
+      border-radius: pr(5px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    span {
+      line-height: pr(34px);
+      padding: 0 0 0 pr(32px);
+      border-bottom: none;
+    }
+  }
+
+  .hx-l-wenda {
+    background: #fff;
+    padding: pr(30px);
+    border: none;
+    margin: 0;
+    .jxhd {
+      padding-bottom: pr(40px);
+      .jx-top {
+        .wd-title {
+          font-size: pr(32px);
+          line-height: pr(36px);
+          margin-bottom: pr(18px);
+          .t-key {
+            font-size: pr(25px);
+            padding: 0 pr(7px);
+            border-radius: pr(5px);
+          }
+          .t-val {
+            font-weight: bold;
+          }
+        }
+        .t-author {
+          font-size: pr(24px);
+          padding-left: pr(30px);
+          line-height: pr(52px);
+          margin-bottom: pr(20px);
+          i {
+            width: 15px;
+            height: 15px;
+            background: url(https://img.thea.cn/public/platform/thea/201905/hx/images/sprite.png) -46px -198px;
+            margin: 0 pr(10px) 0 pr(50px);
+            transform: scale(0.9);
+            vertical-align: text-bottom;
+          }
+        }
+      }
+      .jx-bottom {
+        .wd-title {
+          margin-bottom: pr(16px);
+          .t-key {
+            width: 22px;
+            height: 34px;
+            background: url(../images/01.png) no-repeat;
+            transform: scale(0.9);
+          }
+          .t-val {
+            font-size: pr(34px);
+          }
+        }
+        p {
+          font-size: pr(28px);
+        }
+      }
+    }
+    .qtwd {
+      .i-top {
+        padding: pr(28px) 0 pr(20px);
+        .wd-title {
+          margin-bottom: pr(10px);
+          .t-key {
+            width: pr(64px);
+            height: pr(64px);
+          }
+        }
+        .t-key {
+          margin-right: pr(20px);
+          img {
+            border-radius: 50%;
+          }
+        }
+        p {
+          padding-left: pr(90px);
+        }
+      }
+      .i-bottom {
+        padding: pr(24px);
+        margin-left: pr(90px);
+        margin-bottom: pr(10px);
+        position: relative;
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: pr(10px) solid transparent;
+          border-right: pr(10px) solid transparent;
+          border-bottom: pr(10px) solid #f5f5f5;
+          border-left: pr(10px) solid transparent;
+          position: absolute;
+          top: pr(-20px);
+          left: pr(23px);
+        }
+        .b-l,
+        .b-r {
+          float: left;
+        }
+        .b-l {
+          width: pr(40px);
+          height: pr(40px);
+          margin-right: pr(24px);
+        }
+        .b-r {
+          width: 88%;
+          .r-name {
+            line-height: pr(40px);
+          }
+          a {
+            padding: pr(23px) 0 pr(25px);
+          }
+          p {
+            color: #666666;
+          }
+        }
+      }
+    }
+  }
+
+  .hx-l-course {
+    background: #fff;
+    padding: pr(40px) pr(30px);
+    .c-cont {
+      padding: pr(20px) pr(20px) 0;
+      border-radius: pr(4px);
+      border: solid pr(2px) #eeeeee;
+
+      .c-detail {
+        padding: 0 0 pr(20px);
+      }
+
+      .d-l,
+      .d-r {
+        float: left;
+      }
+      .d-l {
+        width: pr(168px);
+        height: auto;
+        margin-right: pr(20px);
+        .wap-star {
+          display: block;
+          i {
+            width: pr(25px);
+            height: pr(24px);
+          }
+          .s-sel {
+            background: url(../images/star-sel.png) no-repeat;
+            background-size: 100% 100%;
+          }
+          .s-half {
+            background: url(../images/star-half.png) no-repeat;
+            background-size: 100% 100%;
+          }
+          .s-nor {
+            background: url(../images/star-nor.png) no-repeat;
+            background-size: 100% 100%;
+          }
+        }
+      }
+      .d-r {
+        width: 70%;
+        .r-title {
+          font-size: pr(16px);
+          margin-bottom: 6px;
+          .t-name,
+          i {
+            vertical-align: middle;
+          }
+          .t-name {
+            font-size: pr(30px);
+            margin-right: pr(20px);
+            line-height: pr(22px);
+          }
+          .t-star {
+            display: none;
+          }
+        }
+      }
+    }
+    .c-more {
+      padding-top: pr(30px);
+      margin-right: pr(-26px);
+      a {
+        width: pr(308px);
+        height: pr(214px);
+        margin-right: pr(26px);
+        margin-bottom: pr(24px);
+      }
+    }
+  }
+}

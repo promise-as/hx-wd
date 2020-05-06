@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit" />
+  <title>海峡网问答终端改版</title>
+  <script type="text/javascript" src="http://img.thea.cn/public/js/thea.debug.js"></script>
+  <script type="text/javascript" src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css">
+  <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/platform/thea/201905/hx/css/index.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://img.thea.cn/public/platform/thea/201808/msjg-wap/css/swiper.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+  <!-- 页眉 -->
+  <div class="hxw-top-bar-wrap defaults_dataid" data-id="13-0-214-679062-0-0--石家庄韩语培训机构推荐">
+    <div class="hxw-top-bar-inner clearfix">
+      <div class="hxw-nav clearfix">
+        <ul class="hxw-nav-list">
+          <li class="hxw-nav-list-first"><a href="http://www.hxnews.com/">海峡网</a></li>
+          <li><a href="http://www.hxnews.com/news/" target="_blank" title="新闻">新闻</a></li>
+          <li><a href="http://www.hxnews.com/news/fj/" target="_blank" title="福建">福建</a></li>
+          <li><a href="http://www.hxnews.com/news/fj/fz/" target="_blank" title="福州">福州</a></li>
+          <li><a href="http://www.hxnews.com/news/fj/mn/" target="_blank" title="闽南">闽南</a></li>
+          <li><a href="http://www.hxnews.com/news/la/" target="_blank" title="台湾">台湾</a></li>
+          <li><a href="http://www.hxnews.com/news/gn/" target="_blank" title="国内">国内</a></li>
+          <li><a href="http://www.hxnews.com/news/gj/" target="_blank" title="国际">国际</a></li>
+          <li><a href="http://dzb.hxnews.com/news/" target="_blank" title="电子报">电子报</a></li>
+          <li class="hxw-nav-list-last"><a href="#" class="hxw-more">更多<i></i></a>
+            <ul class="hxw-nav-others">
+              <li>
+                <a href="http://www.hxnews.com/edu/jyzx/" title="教育" target="_blank">教育</a>
+                <a href="http://house.hxnews.com/" title="房产" target="_blank">房产</a>
+                <a href="http://auto.hxnews.com/" title="汽车" target="_blank">汽车</a>
+                <a href="http://chuangye.hxnews.com/" title="创业" target="_blank">创业</a>
+                <a href="http://home.hxnews.com/house/" title="家居" target="_blank">家居</a>
+                <a href="http://www.hxnews.com/travel/" title="旅游" target="_blank">旅游</a>
+              </li>
+              <li>
+                <a href="" title="出国" target="_blank">出国</a>
+                <a href="http://love.hxnews.com/" title="婚恋" target="_blank">婚恋</a>
+                <a title="婚嫁" target="_blank" href="http://www.hxnews.com/marry/">婚嫁</a>
+                <a href="http://www.hxnews.com/baby/" title="亲子" target="_blank">亲子</a>
+                <a href="http://www.hxnews.com/news/sp/" title="海峡视频" target="_blank">视频</a>
+                <a href="http://www.hxnews.com/news/tp/" title="海峡图库" target="_blank">图片</a>
+              </li>
+              <li class="hxw-nav-others-last">
+                <a href="http://www.hxnews.com/news/yl/" title="娱乐新闻" target="_blank">娱乐</a>
+                <a href="http://www.hxnews.com/news/ty/" title="体育新闻" target="_blank">体育</a>
+                <a href="http://chuangye.hxnews.com/hxcyhd/" target="_blank" title="IT科技">科技</a>
+                <a href="http://www.hxnews.com/news/cjpd/" title="财经新闻" target="_blank">财经</a>
+                <a href="http://www.hxnews.com/news/dmyx/dmzx/" title="动漫" target="_blank">动漫</a>
+                <a href="http://www.hxnews.com/dz/" target="_blank" title="段子趣图">段子</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--通行证组件start-->
+      <div class="hxw-client">
+        <div class="hxw-client-tl">
+          <a class="hxw-yd">海湃客户端<i></i></a>
+          <div class="hxw-dropdown" style="display: none;">
+            <img src="http://img.hxnews.com/w/templates/nhaidu/skin/images/pages/index_news_20160419/hxw_1.jpg">
+          </div>
+        </div>
+      </div>
+      <div id="SI_User" class="TAP14" style="position: relative;">
+        <div id="logout_status">
+          <div class="ac-rgst"> <a href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=register"
+              class="head-register msg-link" target="_blank">注册</a> </div>
+          <div class="ac-login">
+            <div class="ac-login-cnt">
+              <a class="ac-login-cnt head-login"
+                href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=login">
+                <span class="log-links">登录</span>/</a>
+            </div>
+          </div>
+        </div>
+        <div class="yh ac-login " id="login_status" style="display:none;">
+          <div class="head-login log-links"
+            href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=login">
+            <span class="yh_wright">您好，<a target="_blank"
+                href="http://apps.hxnews.com/?app=contribution&amp;controller=panel&amp;action=index"
+                class="head-member"><em></em></a></span>&nbsp;|&nbsp;<a
+              href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=logout"
+              class="head-logout">退出</a>
+          </div>
+        </div>
+      </div>
+      <!--/通行证组件end-->
+    </div>
+  </div>
+  <!-- 头部 -->
+  <div class="hx-head">
+    <div class="wrap clearfix">
+      <div class="hx-head-l">
+        <div class="hx-logo">
+          <a href="/peixun/">
+            <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/hx-logo.png" alt="">
+          </a>
+        </div>
+        <div class="hx-jg-logo">
+          <a href="/peixun/school_/">
+            <img src="https://px.thea.cn/TheaApp/Px/View/Public/images/nologo.png" alt="" width="105" height="38">
+          </a>
+        </div>
+        <div class="hx-jg">
+          <h1 class="hx-h1">韩语</h1>
+          <div class="hx-address">
+            <p class="hx-act"><i class="hx-address-icon-1 hx-icon"></i><span>石家庄</span><i
+                class="hx-address-icon-2 hx-icon"></i></p>
+            <div class="hx-city-box">
+              <p class="hx-select">请选择城市:</p>
+              <ul class="hx-area">
+                <li class="active">热门城市</li>
+                <li>华北地区</li>
+                <li>华南地区</li>
+                <li>华东地区</li>
+                <li>华中地区</li>
+                <li>中西部地区</li>
+              </ul>
+              <div class="hx-city active">
+                <a href="/peixun/city_sz/">深圳</a>
+                <a href="/peixun/city_gz/">广州</a>
+                <a href="/peixun/city_fs/">佛山</a>
+                <a href="/peixun/city_sh/">上海</a>
+                <a href="/peixun/city_bj/">北京</a>
+                <a href="/peixun/city_nj/">南京</a>
+                <a href="/peixun/city_hz/">杭州</a>
+                <a href="/peixun/city_jssz/">苏州</a>
+                <a href="/peixun/city_tj/">天津</a>
+              </div>
+              <div class="hx-city">
+                <a href="/peixun/city_xian/">西安</a>
+                <a href="/peixun/city_jinan/">济南</a>
+                <a href="/peixun/city_qingdao/">青岛</a>
+                <a href="/peixun/city_dalian/">大连</a>
+                <a href="/peixun/city_haerbin/">哈尔滨</a>
+                <a href="/peixun/city_changchun/">长春</a>
+                <a href="/peixun/city_shijiazhuang/" class="active">石家庄</a>
+              </div>
+              <div class="hx-city">
+                <a href="/peixun/city_nanning/">南宁</a>
+                <a href="/peixun/city_xiamen/">厦门</a>
+                <a href="/peixun/city_dg/">东莞</a>
+                <a href="/peixun/city_zh/">珠海</a>
+                <a href="/peixun/city_haikou/">海口</a>
+                <a href="/peixun/city_jiangmen/">江门</a>
+                <a href="/peixun/city_liuzhou/">柳州</a>
+              </div>
+              <div class="hx-city">
+                <a href="/peixun/city_ningbo/">宁波</a>
+                <a href="/peixun/city_wuxi/">无锡</a>
+                <a href="/peixun/city_changzhou/">常州</a>
+                <a href="/peixun/city_hefei/">合肥</a>
+                <a href="/peixun/city_jiaxing/">嘉兴</a>
+                <a href="/peixun/city_xuzhou/">徐州</a>
+                <a href="/peixun/city_yangzhou/">扬州</a>
+                <a href="/peixun/city_zhangzhou/">漳州</a>
+                <a href="/peixun/city_bengbu/">蚌埠</a>
+                <a href="/peixun/city_dongying/">东营</a>
+                <a href="/peixun/city_fuzhou1/">福州</a>
+              </div>
+              <div class="hx-city">
+                <a href="/peixun/city_changsha/">长沙</a>
+                <a href="/peixun/city_wuhan/">武汉</a>
+                <a href="/peixun/city_zhengzhou/">郑州</a>
+              </div>
+              <div class="hx-city">
+                <a href="/peixun/city_guiyang/">贵阳</a>
+                <a href="/peixun/city_chongqing/">重庆</a>
+                <a href="/peixun/city_chengdu/">成都</a>
+                <a href="/peixun/city_taiyuan/">太原</a>
+                <a href="/peixun/city_kunming/">昆明</a>
+              </div>
+            </div>
+            <div class="hx-city-box-wap">
+              <div class="hx-hot-city">
+                <p>热门城市</p>
+                <div class="hx-city hx-">
+                  <a href="/peixun/city_sz/">深圳</a>
+                  <a href="/peixun/city_gz/">广州</a>
+                  <a href="/peixun/city_fs/">佛山</a>
+                  <a href="/peixun/city_sh/">上海</a>
+                  <a href="/peixun/city_bj/">北京</a>
+                  <a href="/peixun/city_nj/">南京</a>
+                  <a href="/peixun/city_hz/">杭州</a>
+                  <a href="/peixun/city_jssz/">苏州</a>
+                  <a href="/peixun/city_tj/">天津</a>
+                </div>
+              </div>
+              <div class="hx-city-card">
+                <p class="clearfix"><i class="hx-icon icon-triangle"></i>华北地区<i class="hx-icon icon-xl"></i></p>
+                <div class="hx-city">
+                  <a href="/peixun/city_xian/">西安</a>
+                  <a href="/peixun/city_jinan/">济南</a>
+                  <a href="/peixun/city_qingdao/">青岛</a>
+                  <a href="/peixun/city_dalian/">大连</a>
+                  <a href="/peixun/city_haerbin/">哈尔滨</a>
+                  <a href="/peixun/city_changchun/">长春</a>
+                </div>
+              </div>
+              <div class="hx-city-card">
+                <p><i class="hx-icon icon-triangle"></i>华南地区<i class="hx-icon icon-xl"></i></p>
+                <div class="hx-city">
+                  <a href="/peixun/city_nanning/">南宁</a>
+                  <a href="/peixun/city_xiamen/">厦门</a>
+                  <a href="/peixun/city_dg/">东莞</a>
+                  <a href="/peixun/city_zh/">珠海</a>
+                  <a href="/peixun/city_haikou/">海口</a>
+                </div>
+              </div>
+              <div class="hx-city-card">
+                <p><i class="hx-icon icon-triangle"></i>华东地区<i class="hx-icon icon-xl"></i></p>
+                <div class="hx-city">
+                  <a href="/peixun/city_ningbo/">宁波</a>
+                  <a href="/peixun/city_wuxi/">无锡</a>
+                  <a href="/peixun/city_changzhou/">常州</a>
+                  <a href="/peixun/city_hefei/">合肥</a>
+                  <a href="/peixun/city_jiaxing/">嘉兴</a>
+                  <a href="/peixun/city_xuzhou/">徐州</a>
+                  <a href="/peixun/city_yangzhou/">扬州</a>
+                </div>
+              </div>
+              <div class="hx-city-card">
+                <p><i class="hx-icon icon-triangle"></i>华中地区<i class="hx-icon icon-xl"></i></p>
+                <div class="hx-city">
+                  <a href="/peixun/city_changsha/">长沙</a>
+                  <a href="/peixun/city_wuhan/">武汉</a>
+                  <a href="/peixun/city_zhengzhou/">郑州</a>
+                </div>
+              </div>
+              <div class="hx-city-card">
+                <p><i class="hx-icon icon-triangle"></i>中西部地区地区<i class="hx-icon icon-xl"></i></p>
+                <div class="hx-city">
+                  <a href="/peixun/city_guiyang/">贵阳</a>
+                  <a href="/peixun/city_chongqing/">重庆</a>
+                  <a href="/peixun/city_chengdu/">成都</a>
+                  <a href="/peixun/city_taiyuan/">太原</a>
+                  <a href="/peixun/city_kunming/">昆明</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hx-head-r">
+        <div class="hx-search t_search">
+          <form id="search_one" class="clearfix" name="search_one" method="post" onsubmit="CheckForm(); return false;"
+            target="_blank">
+            <input name="text_one" type="text" id="text_one" class="search_text text" value="" placeholder="请输入关键词">
+            <input type="submit" id="submit_one" name="submit_one" class="search_submit btn" value="搜索">
+          </form>
+        </div>
+        <div class="hx-tel">15830143330</div>
+        <div class="hx-wap-nav wap-ele">
+          <div class="show-form"><img src="https://img.thea.cn/public/platform/thea/201905/hx/images/wap-sele.png"
+              alt=""></div>
+          <div class="show-nav"><img src="https://img.thea.cn/public/platform/thea/201905/hx/images/nav.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 导航 -->
+  <div class="hx-nav">
+    <div class="wrap">
+      <div class="hx-jg-class">
+        <p class="hx-jg-all"><span>全部分类</span></p>
+        <ul class="hx-nav-menu clearfix">
+          <li>
+            <a class="hx-l-1"><span>中小学</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_tuozhan/city_shijiazhuang/">拓展训练营</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xyuk/city_shijiazhuang/">素质教育</a><a href="/peixun/xyin/city_shijiazhuang/">夏令营</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_zxx/city_shijiazhuang/">中小学教育</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/sejqr/city_shijiazhuang/">少儿机器人</a><a
+                    href="/peixun/naoli/city_shijiazhuang/">脑力训练</a><a href="/peixun/gx/city_shijiazhuang/">国学</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_fudao/city_shijiazhuang/">中小学课外辅导</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/zhongkao/city_shijiazhuang/">中考复读</a><a
+                    href="/peixun/xxxkfd/city_shijiazhuang/">小学学科辅导</a><a
+                    href="/peixun/zxxkfd/city_shijiazhuang/">中学学科辅导</a><a
+                    href="/peixun/gzxkfd/city_shijiazhuang/">高中学科辅导</a><a
+                    href="/peixun/cyfd/city_shijiazhuang/">初一</a><a href="/peixun/cefd/city_shijiazhuang/">初二</a><a
+                    href="/peixun/csfd/city_shijiazhuang/">初三</a><a href="/peixun/gyfd/city_shijiazhuang/">高一</a><a
+                    href="/peixun/gefd/city_shijiazhuang/">高二</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_yezj/city_shijiazhuang/">幼儿早期教育</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xqjy/city_shijiazhuang/">幼儿园</a><a
+                    href="/peixun/zaojiao/city_shijiazhuang/">早教托班</a><a
+                    href="/peixun/jiyili/city_shijiazhuang/">记忆力</a><a
+                    href="/peixun/qingshang/city_shijiazhuang/">情商</a><a
+                    href="/peixun/qimeng/city_shijiazhuang/">少儿艺术启蒙</a><a
+                    href="/peixun/xiju/city_shijiazhuang/">戏剧英语早教</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_yikao/city_shijiazhuang/">高考艺考辅导</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/gkfd/city_shijiazhuang/">高考复读</a><a
+                    href="/peixun/gaozhong/city_shijiazhuang/">高中</a><a
+                    href="/peixun/gaokaox/city_shijiazhuang/">高考</a><a
+                    href="/peixun/gaokao/city_shijiazhuang/">高考辅导班</a><a
+                    href="/peixun/yikaowh/city_shijiazhuang/">艺考文化课</a><a
+                    href="/peixun/ykzyk/city_shijiazhuang/">艺考专业课</a> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>文体艺术</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_shuhua/city_shijiazhuang/">书画</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xmeis/city_shijiazhuang/">绘画</a><a href="/peixun/xshuf/city_shijiazhuang/">书法</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_music/city_shijiazhuang/">音乐</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xgq/city_shijiazhuang/">钢琴</a><a href="/peixun/cg/city_shijiazhuang/">声乐</a><a
+                    href="/peixun/guzheng/city_shijiazhuang/">古筝</a><a href="/peixun/guqin/city_shijiazhuang/">古琴</a><a
+                    href="/peixun/erhu/city_shijiazhuang/">二胡</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_dance/city_shijiazhuang/">舞蹈</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xwd/city_shijiazhuang/">舞蹈</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_qi/city_shijiazhuang/">棋类</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/wq/city_shijiazhuang/">围棋</a><a href="/peixun/xq/city_shijiazhuang/">象棋</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_qiu/city_shijiazhuang/">球类</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/lanqiu/city_shijiazhuang/">篮球</a><a href="/peixun/zuqiu/city_shijiazhuang/">足球</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_aihao/city_shijiazhuang/">爱好</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xmoive/city_shijiazhuang/">影视戏剧</a><a
+                    href="/peixun/jijian/city_shijiazhuang/">击剑</a><a href="/peixun/semt/city_shijiazhuang/">少儿模特</a><a
+                    href="/peixun/sekc/city_shijiazhuang/">少儿口才</a><a href="/peixun/sebc/city_shijiazhuang/">少儿编程</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>语言培训</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_english/city_shijiazhuang/">英语</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/pets/city_shijiazhuang/">公共英语</a><a href="/peixun/ky/city_shijiazhuang/">英语口语</a><a
+                    href="/peixun/bec/city_shijiazhuang/">商务英语</a><a href="/peixun/toefl/city_shijiazhuang/">托福</a><a
+                    href="/peixun/yasi/city_shijiazhuang/">雅思</a><a href="/peixun/xgn/city_shijiazhuang/">新概念英语</a><a
+                    href="/peixun/sat/city_shijiazhuang/">SAT</a><a href="/peixun/act/city_shijiazhuang/">ACT</a><a
+                    href="/peixun/children/city_shijiazhuang/">少儿英语</a><a href="/peixun/ap/city_shijiazhuang/">AP</a><a
+                    href="/peixun/pte/city_shijiazhuang/">PTE</a><a href="/peixun/al/city_shijiazhuang/">A-level</a><a
+                    href="/peixun/ssat/city_shijiazhuang/">SSAT</a><a href="/peixun/ib/city_shijiazhuang/">IB</a><a
+                    href="/peixun/qtlxks/city_shijiazhuang/">其他留学考试培训</a><a
+                    href="/peixun/isee/city_shijiazhuang/">ISEE</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_xiaoyu/city_shijiazhuang/">小语种</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/riyu/city_shijiazhuang/">日语</a><a href="/peixun/hanyu/city_shijiazhuang/">韩语</a><a
+                    href="/peixun/yiyu/city_shijiazhuang/">意大利语</a><a href="/peixun/xiyu/city_shijiazhuang/">西班牙语</a><a
+                    href="/peixun/deyu/city_shijiazhuang/">德语</a><a href="/peixun/fayu/city_shijiazhuang/">法语</a><a
+                    href="/peixun/xyz/city_shijiazhuang/">其他小语种</a> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>IT</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_software/city_shijiazhuang/">软件系统</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/net/city_shijiazhuang/">网络工程师</a><a href="/peixun/soft/city_shijiazhuang/">软件开发</a><a
+                    href="/peixun/rjcs/city_shijiazhuang/">软件测试</a><a
+                    href="/peixun/webqd/city_shijiazhuang/">web前端</a><a
+                    href="/peixun/jiqiren/city_shijiazhuang/">机器人</a><a href="/peixun/dsj/city_shijiazhuang/">大数据</a><a
+                    href="/peixun/rgzn/city_shijiazhuang/">人工智能</a><a href="/peixun/azkf/city_shijiazhuang/">安卓开发</a><a
+                    href="/peixun/ios/city_shijiazhuang/">ios开发</a><a
+                    href="/peixun/python/city_shijiazhuang/">Python开发</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_dongman/city_shijiazhuang/">影视动漫</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/youx/city_shijiazhuang/">游戏开发</a><a href="/peixun/dmh/city_shijiazhuang/">动漫设计</a><a
+                    href="/peixun/yszz/city_shijiazhuang/">影视制作</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_shejishi/city_shijiazhuang/">设计师</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/pmsj/city_shijiazhuang/">平面设计</a><a href="/peixun/web/city_shijiazhuang/">网页设计</a><a
+                    href="/peixun/xss/city_shijiazhuang/">室内设计</a><a href="/peixun/ui/city_shijiazhuang/">UI设计</a><a
+                    href="/peixun/jxsj/city_shijiazhuang/">机械设计</a><a href="/peixun/qtsj/city_shijiazhuang/">其他设计类培训</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_marketing/city_shijiazhuang/">电子营销</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xds/city_shijiazhuang/">电子商务</a><a href="/peixun/wlyx/city_shijiazhuang/">网络营销</a><a
+                    href="/peixun/cjds/city_shijiazhuang/">跨境电商</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_zhitu/city_shijiazhuang/">软件制图</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/cad/city_shijiazhuang/">CAD</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_itrz/city_shijiazhuang/">IT认证</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/java/city_shijiazhuang/">JAVA</a><a href="/peixun/php/city_shijiazhuang/">PHP</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>职业技能</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_jiashi/city_shijiazhuang/">驾驶</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/wurenji/city_shijiazhuang/">无人机</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_canyin/city_shijiazhuang/">中西餐饮</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xcyi/city_shijiazhuang/">茶艺师</a><a href="/peixun/jn/city_shijiazhuang/">厨师</a><a
+                    href="/peixun/xccy/city_shijiazhuang/">小吃</a><a href="/peixun/xidian/city_shijiazhuang/">西点烘焙</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_mrhz/city_shijiazhuang/">美容化妆</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/mrmf/city_shijiazhuang/">美容</a><a href="/peixun/xxsj/city_shijiazhuang/">形象设计</a><a
+                    href="/peixun/zhenggu/city_shijiazhuang/">整形美容</a><a href="/peixun/mj/city_shijiazhuang/">美甲</a><a
+                    href="/peixun/wenxiu/city_shijiazhuang/">纹绣</a><a href="/peixun/pifu/city_shijiazhuang/">皮肤管理</a><a
+                    href="/peixun/huazhuang/city_shijiazhuang/">化妆</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_clothing/city_shijiazhuang/">服装穿戴</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xfzs/city_shijiazhuang/">服装设计</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_zhuchi/city_shijiazhuang/">播音主持</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/model/city_shijiazhuang/">模特</a><a href="/peixun/kcpx/city_shijiazhuang/">演讲口才</a><a
+                    href="/peixun/lypx/city_shijiazhuang/">礼仪</a><a href="/peixun/zc/city_shijiazhuang/">主持人</a><a
+                    href="/peixun/yanyi/city_shijiazhuang/">演艺</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_shouyi/city_shijiazhuang/">创业手艺</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/sheying/city_shijiazhuang/">摄影</a><a href="/peixun/ch/city_shijiazhuang/">插花</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>资格考试</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_kuaiji/city_shijiazhuang/">会计</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/chujikj/city_shijiazhuang/">会计师</a><a
+                    href="/peixun/xzk/city_shijiazhuang/">注册会计师</a><a href="/peixun/xkjz/city_shijiazhuang/">会计职称</a><a
+                    href="/peixun/xkjw/city_shijiazhuang/">会计实操</a><a
+                    href="/peixun/chujikjx/city_shijiazhuang/">初级会计师</a><a
+                    href="/peixun/zhongji/city_shijiazhuang/">中级会计师</a><a
+                    href="/peixun/gpsc/city_shijiazhuang/">股票实操</a><a
+                    href="/peixun/cjjjs/city_shijiazhuang/">初级经济师</a><a
+                    href="/peixun/zjjjs/city_shijiazhuang/">中级经济师</a><a href="/peixun/xjjs/city_shijiazhuang/">经济师</a><a
+                    href="/peixun/jjswx/city_shijiazhuang/">经济师网校</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_jinrong/city_shijiazhuang/">金融</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/sws/city_shijiazhuang/">税务师</a><a href="/peixun/xlc/city_shijiazhuang/">理财规划师</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_yiyao/city_shijiazhuang/">医药</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/yishifudao/city_shijiazhuang/">执业医师辅导</a><a
+                    href="/peixun/yaoshifudao/city_shijiazhuang/">执业药师辅导</a><a
+                    href="/peixun/xzy/city_shijiazhuang/">执业医师</a><a href="/peixun/wshushi/city_shijiazhuang/">护士</a><a
+                    href="/peixun/weishengfd/city_shijiazhuang/">卫生资格辅导</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_building/city_shijiazhuang/">建筑</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xjl/city_shijiazhuang/">监理工程师</a><a
+                    href="/peixun/xjzs1/city_shijiazhuang/">一级建造师</a><a
+                    href="/peixun/xzj/city_shijiazhuang/">造价工程师</a><a href="/peixun/xyus/city_shijiazhuang/">造价员</a><a
+                    href="/peixun/xag/city_shijiazhuang/">安全工程师</a><a
+                    href="/peixun/xjzs2/city_shijiazhuang/">二级建造师</a><a
+                    href="/peixun/xzx/city_shijiazhuang/">咨询工程师</a><a href="/peixun/wdy/city_shijiazhuang/">建筑九大员</a><a
+                    href="/peixun/xiaofang/city_shijiazhuang/">消防工程师</a><a
+                    href="/peixun/qtjz/city_shijiazhuang/">其他建筑类培训</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_gongzhi/city_shijiazhuang/">国家公职</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/jiaoshi/city_shijiazhuang/">教师资格</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_zhicheng/city_shijiazhuang/">职称考证</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xrl/city_shijiazhuang/">人力资源师</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_qtzy/city_shijiazhuang/">其他职业资格</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xdy/city_shijiazhuang/">导游资格证</a><a
+                    href="/peixun/shehui/city_shijiazhuang/">社会工作者</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_mind/city_shijiazhuang/">心理健康</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xxl/city_shijiazhuang/">心理咨询师</a><a
+                    href="/peixun/xhyin/city_shijiazhuang/">婚姻家庭指导师</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_jiankang/city_shijiazhuang/">健康养生</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/jkgls/city_shijiazhuang/">健康管理师</a><a
+                    href="/peixun/yuys/city_shijiazhuang/">育婴师</a><a href="/peixun/crs/city_shijiazhuang/">催乳师</a><a
+                    href="/peixun/xetuina/city_shijiazhuang/">小儿推拿师</a><a
+                    href="/peixun/ysyj/city_shijiazhuang/">养生瑜伽</a> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>企业管理</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_gaoceng/city_shijiazhuang/">高层管理</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xqzl/city_shijiazhuang/">战略管理</a><a
+                    href="/peixun/guoxue/city_shijiazhuang/">国学智慧</a><a
+                    href="/peixun/glys/city_shijiazhuang/">领导艺术</a><a href="/peixun/zckc/city_shijiazhuang/">总裁研修班</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_zhongceng/city_shijiazhuang/">中层管理</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xqcw/city_shijiazhuang/">财务管理</a><a href="/peixun/xqyx/city_shijiazhuang/">市场营销</a><a
+                    href="/peixun/xqrl/city_shijiazhuang/">人力资源</a><a
+                    href="/peixun/cgwl/city_shijiazhuang/">采购物流管理</a><a
+                    href="/peixun/xmgl/city_shijiazhuang/">项目管理</a><a href="/peixun/scgl/city_shijiazhuang/">生产管理</a><a
+                    href="/peixun/aqgl/city_shijiazhuang/">安全管理</a><a href="/peixun/xsgl/city_shijiazhuang/">销售管理</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_qtgl/city_shijiazhuang/">其他管理培训</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/zcgh/city_shijiazhuang/">职业素养</a><a href="/peixun/khfw/city_shijiazhuang/">客户服务</a><a
+                    href="/peixun/zhgl/city_shijiazhuang/">管理技能</a> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>学历文凭</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_education/city_shijiazhuang/">成人学历</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xcgk/city_shijiazhuang/">成人高考</a><a href="/peixun/xyc/city_shijiazhuang/">远程教育</a><a
+                    href="/peixun/zikao/city_shijiazhuang/">自考</a> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>国际教育</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_chuguo/city_shijiazhuang/">出国留学</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xmg/city_shijiazhuang/">美国留学</a><a href="/peixun/xjbd/city_shijiazhuang/">加拿大留学</a><a
+                    href="/peixun/xxxn/city_shijiazhuang/">新西兰留学</a><a href="/peixun/xrb/city_shijiazhuang/">日本留学</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_youxue/city_shijiazhuang/">海外游学</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/ygyxy/city_shijiazhuang/">英国游学营</a><a
+                    href="/peixun/jndyxy/city_shijiazhuang/">加拿大游学营</a><a
+                    href="/peixun/azyxy/city_shijiazhuang/">澳洲游学营</a><a
+                    href="/peixun/ozyxy/city_shijiazhuang/">欧洲游学营</a><a
+                    href="/peixun/rbyxy/city_shijiazhuang/">日本游学营</a><a
+                    href="/peixun/qtyxy/city_shijiazhuang/">其他游学营</a> </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_gjxx/city_shijiazhuang/">国际学校</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/xxjy/city_shijiazhuang/">国际小学</a><a href="/peixun/xcz/city_shijiazhuang/">国际初中</a><a
+                    href="/peixun/xgz/city_shijiazhuang/">国际高中</a><a href="/peixun/gjyey/city_shijiazhuang/">国际幼儿园</a><a
+                    href="/peixun/gjyuke/city_shijiazhuang/">国际预科</a><a
+                    href="/peixun/gjxxrx/city_shijiazhuang/">国际学校入学考试</a><a
+                    href="/peixun/lxzpj/city_shijiazhuang/">留学作品集</a><a href="/peixun/gjxxqt/city_shijiazhuang/">其他</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a class="hx-l-1"><span>研修</span><i class="icon-l"></i></a>
+            <div class="hx-l-2">
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_pubmed/city_shijiazhuang/">考研考博</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/mba/city_shijiazhuang/">MBA</a><a href="/peixun/emba/city_shijiazhuang/">EMBA</a><a
+                    href="/peixun/kyfd/city_shijiazhuang/">考研</a><a href="/peixun/gwmba/city_shijiazhuang/">免联考MBA</a><a
+                    href="/peixun/zzss/city_shijiazhuang/">在职硕士</a><a href="/peixun/zzbs/city_shijiazhuang/">在职博士</a>
+                </div>
+              </div>
+              <div class="hx-l-con clearfix">
+                <p class="hx-lb-txt"><a href="/peixun/c_zongcai/city_shijiazhuang/">总裁班</a>：</p>
+                <div class="hx-lb-name">
+                  <a href="/peixun/zongcai/city_shijiazhuang/">金融研修班</a><a
+                    href="/peixun/glyx/city_shijiazhuang/">管理研修班</a><a href="/peixun/gxyx/city_shijiazhuang/">国学研修班</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="hx-nav-menu clearfix">
+        <li>
+          <a class="hx-l-1" href="/peixun/school_/">首页</a>
+        </li>
+        <li class="cur">
+          <a class="hx-l-1" href="/peixun/hanyu/cn/">面授培训</a>
+        </li>
+        <li>
+          <a class="hx-l-1" href="/peixun/wenda/hanyu/">学员问答</a>
+        </li>
+        <li>
+          <a class="hx-l-1" rel="nofollow" href="/peixun/hanyu/city_shijiazhuang/hezuo/">品牌合作</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--面包屑-->
+  <div class="page-path">
+    <p>您的位置：
+      <a href="/peixun/">首页</a> &gt;
+      <a href="/peixun/wenda/hanyu/">韩语问答</a> &gt;
+      石家庄韩语培训机构推荐 </p>
+  </div>
+  <!-- 中间内容 -->
+  <div class="wrap clearfix">
+
+    <!-- 左侧内容 -->
+    <div class="hx-l">
+      <!-- 问答 -->
+      <div class="hx-l-wenda">
+        <!-- 精选回答 -->
+        <div class="jxhd">
+          <div class="jx-top">
+            <div class="wd-title">
+              <span class="t-key">问</span>
+              <span class="t-val">石家庄少儿英语培训机构推荐</span>
+            </div>
+            <div class="t-author">
+              发布ID：张三 <i></i> 发布时间 2020-03-19 16:00
+            </div>
+          </div>
+          <div class="jx-bottom">
+            <div class="wd-title">
+              <i class="t-key"></i>
+              <span class="t-val">精选回答</span>
+            </div>
+            <p>
+              最佳答案描述。例如：石家庄新能量英语”基于中国人韩语学习的思维习惯，融合先进多媒体日语教学产品，配合高端的
+              全外教教学以及融入韩国文化的真实语言环境，并独创多维高效韩语教学模式。 彻底解决传统韩语学习的难题。给您全
+              新的韩语学习体验，为中国人的韩语学习带来了全新的解决方案。
+            </p>
+          </div>
+        </div>
+        <!-- 其他问答 -->
+        <div class="qtwd">
+          <div class="border-title">
+            <span>其他问答</span>
+          </div>
+          <div class="qt-item">
+            <div class="i-top">
+              <div class="wd-title">
+                <i class="t-key">
+                  <img src="images/a_1.png" alt="">
+                </i>
+                <span class="t-val">爱学习的小白</span>
+              </div>
+              <p>
+                其他问题描述，双击编辑文本。其他问题描述，双击编辑文本。其他问题描述，双击编辑文本。其他问题的描述，双击编
+                辑文本。
+              </p>
+            </div>
+            <div class="i-bottom">
+              <div class="b-l">
+                <img src="images/a_2.png" alt="">
+              </div>
+              <div class="b-r">
+                <div class="r-name">李老师</div>
+                <p>
+                  答案描述，双击编辑文本。答案描述，双击编辑文本。答案描述，双击编辑文本。答案描述，双击编辑文
+                  本。答案描述，双击编辑文本。
+                </p>
+                <a href="">
+                  <img src="images/yy.png" alt="">
+                </a>
+                <p>
+                  答案描述，双击编辑文本。答案描述，双击编辑文本。答案描述，双击编辑文本。答案描述，双击编辑文
+                  本。答案描述，双击编辑文本。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="qt-item">
+            <div class="i-top">
+              <div class="wd-title">
+                <i class="t-key">
+                  <img src="images/a_1.png" alt="">
+                </i>
+                <span class="t-val">爱学习的小白</span>
+              </div>
+              <p>
+                其他问题描述，双击编辑文本。其他问题描述，双击编辑文本。其他问题描述，双击编辑文本。其他问题的描述，双击编
+                辑文本。
+              </p>
+            </div>
+            <div class="i-bottom">
+              <div class="b-l">
+                <img src="images/a_2.png" alt="">
+              </div>
+              <div class="b-r">
+                <div class="r-name">李老师</div>
+                <p>
+                  答案描述，双击编辑文本。答案描述，双击编辑文本。答案描述，双击编辑文本。答案描述，双击编辑文
+                  本。答案描述，双击编辑文本。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--学习内容-->
+      <div class="tcn-l-xxnr">
+        <form class="tcn-l-form sign-in">
+          <input type="text" class="tcn-user-name user-name" placeholder="请输入您的姓名">
+          <input type="text" class="tcn-user-tel user-tel" maxlength="11" placeholder="请输入您的联系方式&nbsp;">
+          <input type="text" class="tcn-user-con user-con" placeholder="请输入您想学习的内容&nbsp;">
+          <input type="submit" class="tcn-submit" value="立即定制">
+          <div class="tcn-online">在线咨询</div>
+        </form>
+      </div>
+
+      <!-- 机构课程推荐 -->
+      <div class="hx-l-course">
+        <div class="border-title">
+          <span>机构课程推荐</span>
+        </div>
+        <div class="c-cont">
+          <div class="c-detail">
+            <div class="d-l">
+              <a href="">
+                <img src="images/lg.png" alt="徐州朗阁雅思培训中心">
+              </a>
+              <span class="wap-star">
+                <i class="s-sel"></i>
+                <i class="s-sel"></i>
+                <i class="s-sel"></i>
+                <i class="s-half"></i>
+                <i class="s-nor"></i>
+              </span>
+            </div>
+            <div class="d-r">
+              <div class="r-title">
+                <span class="t-name">沃尔得国际英语</span>
+                <span class="t-star">
+                  <i class="s-sel"></i>
+                  <i class="s-sel"></i>
+                  <i class="s-sel"></i>
+                  <i class="s-half"></i>
+                  <i class="s-nor"></i>
+                </span>
+              </div>
+              <p>
+                机构介绍，字数控制2行内，双击编辑文本双击编辑文本双击编辑文本。机构介绍，字数控制2行
+                内，双击编辑文本双击编辑文本双击编辑文本字数控制2行内，双击编辑文本双击编辑文本双击编辑文本
+              </p>
+            </div>
+          </div>
+          <div class="c-more">
+            <a href="">
+              <img src="images/kc_1.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/kc_2.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/kc_3.png" alt="">
+            </a>
+            <a href="">
+              <img src="images/kc_4.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 相关问答 -->
+      <div class="hx-l-kctj">
+        <div class="hx-tit-box-2 clearfix">
+          <h2 class="hx-tit-2"><span>相关问答</span></h2>
+        </div>
+        <ul class="hx-ms-list">
+          <li>
+            <a href="/peixun/w_5589.htm">杭州下城区哪里有教韩语的？</a>
+          </li>
+          <li>
+            <a href="/peixun/w_5676.htm">杭州报班学韩语学费什么水平</a>
+          </li>
+          <li>
+            <a href="/peixun/w_5737.htm">杭州哪家韩语培训机构比较专业</a>
+          </li>
+          <li>
+            <a href="/peixun/w_5739.htm">杭州哪里有学韩语的地方</a>
+          </li>
+          <li>
+            <a href="/peixun/w_6510.htm">杭州哪个培训韩语机构好</a>
+          </li>
+          <li>
+            <a href="/peixun/w_8573.htm">石家庄韩语培训哪家好？</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 右侧内容 -->
+    <div class="hx-r">
+      <!-- 表单 -->
+      <div class="hx-r-form">
+        <div class="f-top">
+          <div class="t-l">
+            <img src="images/lg.png" alt="">
+          </div>
+          <div class="t-r">
+            <div class="r-name">李老师</div>
+            <div class="r-advisor">
+              环球雅思 <span class="text">资深课程顾问</span>
+              <p>帮助1000+学员成功选课</p>
+            </div>
+          </div>
+        </div>
+        <ul class="jg-head">
+          <li>
+            <img src="images/lg.png" alt="">
+          </li>
+          <li class="on">
+            <img src="images/lg.png" alt="">
+          </li>
+          <li>
+            <img src="images/lg.png" alt="">
+          </li>
+        </ul>
+        <form class="sign-in">
+          <input type="text" class="user-name" placeholder="您的姓名">
+          <input type="text" class="user-tel" placeholder="您的手机号码">
+          <input type="submit" value="让TA为我服务">
+        </form>
+        <div class="f-zx">
+          <span class="zx-text">咨询热线</span>
+          <span class="zx-tel">15830143330</span>
+        </div>
+      </div>
+
+      <!--热门新闻-->
+      <div class="tcn-r-news">
+        <div class="tcn-r-title">
+          <i></i>
+          <span>热门新闻</span>
+        </div>
+        <div class="tcn-new-vessel">
+          <div class="tcn-new-item clearfix">
+            <img src="http://img.thea.cn/thea/images/contentpic/15/132.png" alt="西安韩语学习网课" width="121" height="84">
+            <div class="tcn-wk-xq">
+              <a class="tcn-wk-xq-headline" href="/peixun/hanyu_312107.htm" target="_blank">
+                · 西安韩语学习网课 </a>
+              <div class="tcn-wk-xq-nr">
+                <i></i>
+                <span>2020-04-30</span>
+              </div>
+            </div>
+          </div>
+          <div class="tcn-new-item clearfix">
+            <img src="http://img.thea.cn/thea/images/contentpic/15/62.png" alt="西安基础韩语班" width="121" height="84">
+            <div class="tcn-wk-xq">
+              <a class="tcn-wk-xq-headline" href="/peixun/hanyu_312106.htm" target="_blank">
+                · 西安基础韩语班 </a>
+              <div class="tcn-wk-xq-nr">
+                <i></i>
+                <span>2020-04-30</span>
+              </div>
+            </div>
+          </div>
+          <ul class="tcn-new-list">
+            <li><a href="/peixun/hanyu_312105.htm">▪ 西安韩语班排名</a></li>
+            <li><a href="/peixun/hanyu_312104.htm">▪ 西安韩语topik培训</a></li>
+            <li><a href="/peixun/hanyu_312103.htm">▪ 西安韩语中级培训</a></li>
+            <li><a href="/peixun/hanyu_312102.htm">▪ 西安高级韩语培训</a></li>
+            <li><a href="/peixun/hanyu_312101.htm">▪ 西安韩语辅导大概多少钱</a></li>
+            <li><a href="/peixun/hanyu_312100.htm">▪ 西安韩语入门培训</a></li>
+            <li><a href="/peixun/hanyu_311841.htm">▪ 郑州正规韩语四级培训班</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--热门机构-->
+      <div class="tcn-r-jg">
+        <div class="tcn-r-title">
+          <i></i>
+          <span>热门机构</span>
+        </div>
+        <a class="tcn-jg-item2" href="/peixun/school_xzlangge/" target="_blank">
+          <img src="https://px.thea.cn/Public/Upload/1533991/Logo/1496822858.jpg" alt="徐州朗阁雅思培训中心">
+        </a><a class="tcn-jg-item2" href="/peixun/school_xzxuesi/" target="_blank">
+          <img src="https://px.thea.cn/Public/Upload/1518100/Logo/1415584144.png" alt="徐州学思">
+        </a><a class="tcn-jg-item2" href="/peixun/school_xzlxjy/" target="_blank">
+          <img src="https://px.thea.cn/Public/Upload/Logo/1558590814.jpg" alt="徐州领学教育">
+        </a><a class="tcn-jg-item2" href="/peixun/school_qzkwjy/" target="_blank">
+          <img src="https://px.thea.cn/Public/Upload/Logo/1575614414.png" alt="泉州日语培训机构--可为小语种">
+        </a> <!-- 移动端热门机构 -->
+        <div
+          class="swiper-container wap-ele tcn-jg-swiper swiper-container-horizontal swiper-container-free-mode swiper-container-ios">
+          <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+            <div class="swiper-slide tcn-jg-item swiper-slide-active">
+              <img src="https://px.thea.cn/Public/Upload/1533991/Logo/1496822858.jpg" alt="徐州朗阁雅思培训中心">
+              <div class="tcn-jg-xq">
+                <a href="/peixun/school_xzlangge/" target="_blank">进入机构主页 </a>
+              </div>
+            </div>
+            <div class="swiper-slide tcn-jg-item swiper-slide-next">
+              <img src="https://px.thea.cn/Public/Upload/1518100/Logo/1415584144.png" alt="徐州学思">
+              <div class="tcn-jg-xq">
+                <a href="/peixun/school_xzxuesi/" target="_blank">进入机构主页 </a>
+              </div>
+            </div>
+            <div class="swiper-slide tcn-jg-item">
+              <img src="https://px.thea.cn/Public/Upload/Logo/1558590814.jpg" alt="徐州领学教育">
+              <div class="tcn-jg-xq">
+                <a href="/peixun/school_xzlxjy/" target="_blank">进入机构主页 </a>
+              </div>
+            </div>
+            <div class="swiper-slide tcn-jg-item">
+              <img src="https://px.thea.cn/Public/Upload/Logo/1575614414.png" alt="泉州日语培训机构--可为小语种">
+              <div class="tcn-jg-xq">
+                <a href="/peixun/school_qzkwjy/" target="_blank">进入机构主页 </a>
+              </div>
+            </div>
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+        <!-- 移动端热门机构结束 -->
+      </div>
+    </div>
+
+  </div>
+  <div class="hx-friend-link">
+    <div class="wrap clearfix">
+      <div class="link-list link-list-1">
+        <h4 class="link-tit"><i></i><span>友情链接</span></h4>
+        <div class="link-box">
+          <div class="qq-box">
+            <a class="qq" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1653712559&amp;site=qq&amp;menu=yes" target="_blank"
+              rel="nofollow">
+              合作QQ：<span>1653712559</span>
+            </a>
+            <a class="email" href="javascript:void(0)">
+              问题投诉邮箱：<span>1653712559@qq.com</span> </a>
+          </div>
+        </div>
+      </div>
+      <div class="link-list link-list-2">
+        <h4 class="link-tit"><i></i><span>机构推荐</span></h4>
+        <div class="link-box">
+          <a href="/peixun/school_szbws/">深圳博沃思素质教育</a>
+          <a href="/peixun/school_szlzxw/">联展国际名校学位</a>
+          <a href="/peixun/school_webi/">深圳韦博英语</a>
+          <a href="/peixun/school_szzppx/">深圳中鹏职业培训学校</a>
+          <a href="/peixun/school_bjskss/">北京社科赛斯</a>
+          <a href="/peixun/school_bjyljy/">北京优路教育</a>
+          <a href="/peixun/school_szndzypx/">诺达建工学院</a>
+          <a href="/peixun/school_tcsyjy/">苏州上元教育</a>
+          <a href="/peixun/school_bjhxr/">北京火星人教育</a>
+          <a href="/peixun/school_hzxdljy/">杭州兄弟连IT教育</a>
+          <a href="/peixun/school_kanaiji/">广州卡耐基教育</a>
+          <a href="/peixun/school_bodaeduu/">广州搏达职业学校</a>
+          <a href="/peixun/school_gjxy/">深圳国际学校</a>
+          <a href="/peixun/school_ff12/">上海非凡学院</a>
+          <a href="/peixun/school_chht/">上海秦汉胡同国学书院</a>
+          <a href="/peixun/school_szun/">深圳大学学历培训</a>
+          <a class="link-more" href="/peixun/school/">更多&gt;&gt;</a>
+        </div>
+      </div>
+      <div class="link-list link-list-3">
+        <h4 class="link-tit"><i></i><span>全国分站</span></h4>
+        <div class="link-box">
+          <a href="/peixun/city_sz/">深圳</a>
+          <a href="/peixun/city_gz/">广州</a>
+          <a href="/peixun/city_sh/">上海</a>
+          <a href="/peixun/city_bj/">北京</a>
+          <a href="/peixun/city_jssz/">苏州</a>
+          <a href="/peixun/city_hz/">杭州</a>
+          <a href="/peixun/city_nj/">南京</a>
+          <a href="/peixun/city_tj/">天津</a>
+          <a href="/peixun/city_fs/">佛山</a>
+          <a href="/peixun/city_xiamen/">厦门</a>
+          <a href="/peixun/city_changsha/">长沙</a>
+          <a href="/peixun/city_qingdao/">青岛</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p class="links"><a href="/peixun/course/" target="_blank">面授</a>| <a href="/peixun/wangxiao/"
+        target="_blank">网课</a>| <a href="/peixun/news/" target="_blank">资讯</a>| <a href="/peixun/school/"
+        target="_blank">机构</a>| <a href="/peixun/sitemap.html" target="_blank">网站地图</a>| <a href="/peixun/hezuo/"
+        target="_blank">合作</a></p>
+    <p>闽ICP备15008128号-2 闽互联网新闻信息服务备案编号：20070802号</p>
+  </div>
+  <div class="wap-bottom wap-ele clearfix">
+    <a class="yyst tc-btn"></a>
+    <a href="tel:15830143330"></a>
+  </div>
+
+  <script src="https://img.thea.cn/public/js/thea.ms.form.js" type="text/javascript"></script>
+  <script src="https://img.thea.cn/public/platform/thea/201808/msjg-wap/js/swiper.min.js"></script>
+  <script src="https://img.thea.cn/public/platform/thea/201905/hx/js/index.js"></script>
+</body>
+
+</html>
