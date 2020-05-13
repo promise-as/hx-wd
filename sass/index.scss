@@ -233,12 +233,12 @@
   background: url(../images/form-bg.png) no-repeat;
   margin-bottom: 20px;
   .jg-bd {
-    li{
+    li {
       @extend %clearfix;
       margin-right: -2%;
       margin-bottom: 20px;
       display: none;
-      &.on{
+      &.on {
         display: block;
       }
     }
@@ -522,7 +522,7 @@
         height: auto;
         margin-right: pr(20px);
         padding: 0;
-        a{
+        a {
           padding: pr(4px);
           margin-bottom: pr(10px);
         }
@@ -576,7 +576,7 @@
     }
   }
 
-  .hx-r-form{
+  .hx-r-form {
     display: none;
   }
 }
